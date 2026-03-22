@@ -1,5 +1,9 @@
 fn main() {
-    const COST: [i8] = [2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14];
+    const SUITS: [char; 4] = ['H', 'S', 'D', 'C'];
+    const VALUE: [i8; 13] = [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14];
 
-    const SUITS: [char] = ['H', 'S', 'D', 'C'];
+    struct Card {
+        suit: char,
+        value: i8,
+    }
 }
