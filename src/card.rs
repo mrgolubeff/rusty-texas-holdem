@@ -31,12 +31,12 @@ impl Card {
 }
 
 impl Card {
-    pub fn get_value(&self) -> u8 {
-        self.value
-    }
-
     pub fn get_suit(&self) -> &Suit {
         &self.suit
+    }
+
+    pub fn get_value(&self) -> u8 {
+        self.value
     }
 
     pub fn is_ace(&self) -> bool {
