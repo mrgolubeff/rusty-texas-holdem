@@ -1,6 +1,7 @@
 use std::vec::Vec;
 use crate::card::{Card, Suit};
 
+#[derive(Debug)]
 pub struct Deck {
     cards: Vec<Card>,
 }
