@@ -8,5 +8,5 @@ pub enum Hands {
     ThreeOfAKind(u16),
     TwoPair(u16),
     Pair(u16),
-    Kicker(u16),
+    HighCard(u16),
 }
