@@ -1,3 +1,4 @@
+// suit emojis: ♥️♠️♦️♣️
 #[derive(Debug)]
 pub enum Suit {
     Hearts,
