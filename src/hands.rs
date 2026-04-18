@@ -1,3 +1,5 @@
+use crate::card::Card;
+
 pub enum Hand {
     RoyalFlush(u16),
     StraightFlush(u16),
@@ -27,4 +29,13 @@ impl Hand {
             Self::HighCard(value) => *value
         }
     }
+}
+
+pub struct PlayerHands {
+    cards: Vec<&Card>,
+    hands: Vec<Hand>,
+}
+
+impl PlayerHands {
+    pub fn make_hands(Vec<&Card>) -> Self {}
 }
