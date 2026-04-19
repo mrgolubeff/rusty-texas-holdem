@@ -1,10 +1,7 @@
-pub mod card;
-pub mod deck;
-pub mod hands;
-pub mod pile;
+use rusty_holdem::deck::Deck;
 
 fn main() {
-    let mut deck = crate::deck::Deck::construct_deck();
+    let mut deck = Deck::construct_deck();
     println!("{:?}\n\n\n", deck);
     deck.shuffle_deck();
     println!("{:?}", deck);
