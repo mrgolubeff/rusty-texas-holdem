@@ -1,5 +1,4 @@
 // suit emojis: ♥️♠️♦️♣️
-#[derive(Debug)]
 pub enum Suit {
     Hearts,
     Spades,
@@ -7,7 +6,6 @@ pub enum Suit {
     Clubs,
 }
 
-#[derive(Debug)]
 pub struct Card {
     suit: Suit,
     value: u8,
