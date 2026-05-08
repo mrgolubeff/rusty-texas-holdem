@@ -1,5 +1,6 @@
 pub const SUITS: [Suit; 4] = [Suit::Hearts, Suit::Spades, Suit::Diamonds, Suit::Clubs];
 
+#[derive(Clone)]
 pub enum Suit {
     Hearts,
     Spades,
