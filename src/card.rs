@@ -1,3 +1,5 @@
+pub const SUITS: [Suit; 4] = [Suit::Hearts, Suit::Spades, Suit::Diamonds, Suit::Clubs];
+
 pub enum Suit {
     Hearts,
     Spades,
