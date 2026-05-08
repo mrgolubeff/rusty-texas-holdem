@@ -28,7 +28,6 @@ impl Deck {
 
 impl Deck {
     pub fn shuffle_deck(&mut self) {
-        // TODO: insert animation logic.
         self.cards.shuffle(&mut self.potato);
     }
 }
