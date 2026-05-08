@@ -1,8 +1,8 @@
-use std::vec::Vec;
-use crate::card::{Card, Suit};
+use crate::card::{Card, SUITS};
 use rand::rng;
 use rand::rngs::ThreadRng;
 use rand::seq::SliceRandom;
+use std::vec::Vec;
 
 pub struct Deck {
     cards: Vec<Card>,
