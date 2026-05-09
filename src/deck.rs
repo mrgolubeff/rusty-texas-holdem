@@ -1,4 +1,4 @@
-use crate::card::{Card, SUITS};
+use crate::card::{Card, HIGHEST_VALUE, INITIAL_VALUE, SUITS};
 use rand::rng;
 use rand::rngs::ThreadRng;
 use rand::seq::SliceRandom;
@@ -14,7 +14,7 @@ impl Deck {
         let mut cards = Vec::new();
 
         for suit in SUITS {
-            for value in 2..=14 {
+            for value in INITIAL_VALUE..=HIGHEST_VALUE {
                 cards.push(Card::new(suit.clone(), value));
             }
         }
