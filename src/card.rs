@@ -1,4 +1,8 @@
 pub const SUITS: [Suit; 4] = [Suit::Hearts, Suit::Spades, Suit::Diamonds, Suit::Clubs];
+/// A lowest card is 2.
+pub const INITIAL_VALUE: u8 = 2;
+/// A highest card is Ace with value of 14.
+pub const HIGHEST_VALUE: u8 = 14;
 
 #[derive(Clone)]
 pub enum Suit {
