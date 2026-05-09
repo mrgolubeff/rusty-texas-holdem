@@ -16,27 +16,21 @@ pub struct Card {
     suit: Suit,
     value: u8,
     letter: char,
-    emoji: String,
-    // "is_ace" field's needed so that calling code can check
-    // if it should combinations with both "1" and "14" values.
-    is_ace: bool,
+    emoji: &'static str,
 }
 
 impl Card {
     pub fn new(suit: Suit, value: u8) -> Self {
-        let is_ace: bool = value == 14;
-
         let (letter, emoji) = match suit {
-            Suit::Hearts => ('H', "♥️".to_string()),
-            Suit::Spades => ('S', "♠️".to_string()),
-            Suit::Diamonds => ('D', "♦️".to_string()),
-            Suit::Clubs => ('C', "♣️".to_string()),
+            Suit::Hearts => ('H', "♥️"),
+            Suit::Spades => ('S', "♠️"),
+            Suit::Diamonds => ('D', "♦️"),
+            Suit::Clubs => ('C', "♣️"),
         };
 
         Self {
             suit,
             value,
-            is_ace,
             letter,
             emoji,
         }
@@ -61,6 +55,10 @@ impl Card {
     }
 
     pub fn is_ace(&self) -> bool {
-        self.is_ace
+        self.value == 14
+    }
+
+    pub fn is_joker(&self) -> bool {
+        self.value == 0
     }
 }
