@@ -2,15 +2,14 @@ use crate::card::{Card, HIGHEST_VALUE, INITIAL_VALUE, SUITS};
 use rand::rng;
 use rand::rngs::ThreadRng;
 use rand::seq::SliceRandom;
-use std::vec::Vec;
 
 pub struct Deck {
     cards: Vec<Card>,
-    potato: ThreadRng, // Random number generator. If you know, you know.
+    rng: ThreadRng,
 }
 
 impl Deck {
-    pub fn construct_deck() -> Self {
+    pub fn new() -> Self {
         let mut cards = Vec::new();
 
         for suit in SUITS {
@@ -19,15 +18,12 @@ impl Deck {
             }
         }
 
-        Self {
-            cards,
-            potato: rng(),
-        }
+        Self { cards, rng: rng() }
     }
 }
 
 impl Deck {
-    pub fn shuffle_deck(&mut self) {
-        self.cards.shuffle(&mut self.potato);
+    pub fn shuffle(&mut self) {
+        self.cards.shuffle(&mut self.rng);
     }
 }
